@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+
+
+<div>
+    <form th:method="PATCH" th:action="@{/profile/{userLogin} (userLogin=${editUser.getLogin()})}" th:object="${editUser}">
+
+        <label for="password">Enter new password:</label>
+        <input type="text" th:field="*{password}" id="password"/>
+        <br/>
+
+        <input type="submit" value="Update password!"/>
+    </form>
+</div>
+
+</body>
+</html>

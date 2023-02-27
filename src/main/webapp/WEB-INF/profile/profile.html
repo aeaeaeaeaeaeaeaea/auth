@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+
+<div>
+    <p th:text="${person.getLogin()}">user</p>
+    <p th:text="${person.getPassword()}">user</p>
+</div>
+
+<div>
+    <a th:href="@{/profile/{userLogin}/edit(userLogin=${person.getLogin()})}">Forgot your password?</a>
+</div>
+
+</body>
+</html>
